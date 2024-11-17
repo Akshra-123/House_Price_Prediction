@@ -10,6 +10,7 @@ plt.show()
 # Train - Test Splitting
 import numpy as np
 def train_test_split(data,test_ratio):
+    np.random.seed(42)
     shuffled=np.random.permutation(len(data))
     test_set_size=int(len(data)*test_ratio)
     test_indices=shuffled[:test_set_size]
